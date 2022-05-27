@@ -1,5 +1,11 @@
 // ASSESSMENT 3: Coding Practical Questions with Jest
 
+// const { describe } = require("yargs")
+
+// const { exportAllDeclaration } = require("@babel/types")
+// const { isTypedArray } = require("util/types")
+// const { describe } = require("yargs")
+
 // Please read all questions thoroughly
 // Pseudo coding is REQUIRED
 // If you get stuck, please leave comments to help us understand your thought process
@@ -29,28 +35,77 @@ const fibLength2 = 10
 
 // a) Create a test with expect statements for each of the variables provided.
 
-const fullArr1 = [4, 9, 0, "7", 8, true, "hey", 7, 199, -9, false, "hola"]
+describe('oddOrdered', () => {
+    it('returns a new array of only odd numbers sorted from least to greatest.', () => {
+        const fullArr1 = [4, 9, 0, "7", 8, true, "hey", 7, 199, -9, false, "hola"]
 // Expected output: [-9, 7, 9, 199]
 
 const fullArr2 = ["hello", 7, 23, -823, false, 78, null, "67", 6, "number"]
 // Expected output: [-823, 7, 23]
+        expect(oddOrdered(fullArr1)).toEqual([-9, 7, 9, 199])
+        expect(oddOrdered(fullArr2)).toEqual([-823, 7, 23])
+    })
+})
+
+// I GOT RED 
+// FAIL  ./code-challenges.test.js
+// oddOrdered
+//   ✕ returns a new array of only odd numbers sorted from least to greatest. (1 ms)
+
+// ● oddOrdered › returns a new array of only odd numbers sorted from least to greatest.
+
+//   ReferenceError: oddOrdered is not defined
 
 
 // b) Create the function that makes the test pass.
+
+// const oddOrdered = (array) => {
+//     return array.filter(value => {
+//        let num = typeof value === 'number'
+//         return num.sort((a, b) => a-b)
+//       })
+// }
+
+       
+
+
 
 
 // --------------------3) Create a function that takes in an array and returns an array of the accumulating sum. An empty array should return an empty array.
 
 // a) Create a test with expect statements for each of the variables provided.
 
-const numbersToAdd1 = [2, 4, 45, 9]
-// Excpected output: [2, 6, 51, 60]
+describe('accuSum', () => {
+    it('returns an array of the accumulating sum. An empty array should return an empty array.', () => {
+        const numbersToAdd1 = [2, 4, 45, 9]
+        // Excpected output: [2, 6, 51, 60]
 
-const numbersToAdd2 = [0, 7, -8, 12]
-// Expected output: [0, 7, -1, 11]
+        const numbersToAdd2 = [0, 7, -8, 12]
+        // Expected output: [0, 7, -1, 11]
 
-const numbersToAdd3 = []
-// Expected output: []
+        const numbersToAdd3 = []
+        // Expected output: []
+        expect(accuSum(numbersToAdd1)).toEqual([2, 6, 51, 60])
+        expect(accuSum(numbersToAdd2)).toEqual([0, 7, -1, 11])
+        expect(accuSum(numbersToAdd3)).toEqual([])
+    })
+})
+
+// I GOT RED 
+// FAIL  ./code-challenges.test.js
+
+// ● accuSum › returns an array of the accumulating sum. An empty array should return an empty array.
+
+//   ReferenceError: accuSum is not defined
 
 
 // b) Create the function that makes the test pass.
+
+const accuSum = (arrNum) => {
+    for(let i=0; i<arrNum.length; i++){
+        for(let j= i+1; j<arrNum.length; j++){
+            return arrNum[i] + arrNum[j]
+        }
+    }
+}
+
