@@ -35,17 +35,17 @@ const fibLength2 = 10
 
 // a) Create a test with expect statements for each of the variables provided.
 
-describe('oddOrdered', () => {
-    it('returns a new array of only odd numbers sorted from least to greatest.', () => {
-        const fullArr1 = [4, 9, 0, "7", 8, true, "hey", 7, 199, -9, false, "hola"]
-// Expected output: [-9, 7, 9, 199]
+// describe('oddOrdered', () => {
+//     it('returns a new array of only odd numbers sorted from least to greatest.', () => {
+//         const fullArr1 = [4, 9, 0, "7", 8, true, "hey", 7, 199, -9, false, "hola"]
+// // Expected output: [-9, 7, 9, 199]
 
-const fullArr2 = ["hello", 7, 23, -823, false, 78, null, "67", 6, "number"]
-// Expected output: [-823, 7, 23]
-        expect(oddOrdered(fullArr1)).toEqual([-9, 7, 9, 199])
-        expect(oddOrdered(fullArr2)).toEqual([-823, 7, 23])
-    })
-})
+// const fullArr2 = ["hello", 7, 23, -823, false, 78, null, "67", 6, "number"]
+// // Expected output: [-823, 7, 23]
+//         expect(oddOrdered(fullArr1)).toEqual([-9, 7, 9, 199])
+//         expect(oddOrdered(fullArr2)).toEqual([-823, 7, 23])
+//     })
+// })
 
 // I GOT RED 
 // FAIL  ./code-challenges.test.js
@@ -101,11 +101,9 @@ describe('accuSum', () => {
 
 // b) Create the function that makes the test pass.
 
-const accuSum = (arrNum) => {
-    for(let i=0; i<arrNum.length; i++){
-        for(let j= i+1; j<arrNum.length; j++){
-            return arrNum[i] + arrNum[j]
-        }
+const accuSum = (nums) => {
+    for(let i = 1; i < nums.length; i++) {
+      nums[i] = nums[i] + nums[i-1];
     }
+     return nums;
 }
-
