@@ -38,18 +38,18 @@ Researched answer: Yarn is a package manager for code. It allows devs to use and
 
 6. STRETCH: What is an anonymous function in JavaScript?
 
-Your answer:
+Your answer: I dont think I have ever expierenced or used an anonymous function but a normal function is a reusable piece of code that we can invoke whenever wherever, significatly reducing the amount of typing the dev has to do. If I were to guess what an anonymous function is I would guess it is a function with no name.
 
-Researched answer:
+Researched answer: I was suprisingly right, an anonymous function is a function without a name so when the dev is creating the function instead of doing const function name and then arrow syntax, you just do const and arrow syntax. However with an anonymous function you cannot call it after creation because it does not have a name to call.
 
 ## Looking Ahead: Terms for Next Week
 
-1. Conditional rendering:
+1. Conditional rendering: Conditional rendering is the ability to render different UI's based on the outcome of a true or false statement. So in React it allows the dev to render different elements and or components based on the condition.
 
-2. Object-oriented programming:
+2. Object-oriented programming:OOP os a computer programming model that organizes software design around data or objects instead of functions and logic.
 
-3. Ruby:
+3. Ruby:Ruby is an interpreted high level general purpose programming language which emphasises productivity and simplicity, everything in ruby is an object including primitive data types.
 
-4. Ruby blocks:
+4. Ruby blocks: Ruby blocks are anonymous functions that can be passed into methods. They are enclosed in curly brackets if in a single line and do-end statements if in multiple lines.
 
-5. Ruby hashes:
+5. Ruby hashes: Ruby hashes are a collection of unique keys and their values. Kind of like an array but instead of accessing a value using the index hashes use object types so key value pairs.
