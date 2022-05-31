@@ -62,12 +62,18 @@
           }
           // No need to change anything ABOVE this line ^
 
+
+          //The first problem I found was that the return needed to be wrapped in React fragments or a div so I added fragments
+          //Second problem was the first button onClick did not have anything in the curly brackets so nothing wouldve happened when the button was clicked so i added the this.drawCard method which was created above allowing the user to click a button and draw a card until there were no more to draw. You use this. because your refering to the document you are currently working in.
+          // The third problem was that the second buttons onClick did not have this. and we use it because of what I mentioned above. Without it the onClick does not know what the method is we are calling. 
+
           return(
+            <>
             <h1>Draw a Card</h1>
-            <button onClick={}>
+            <button onClick={this.drawCard}>
               Click to Draw a Card
             </button>
-            <button onClick={shuffle}>
+            <button onClick={this.shuffle}>
               Return Cards and Shuffle Deck
             </button>
             <div style={handStyles}>
@@ -79,6 +85,7 @@
                 )
               })}
             </div>
+            </>
           )
         }
       }
