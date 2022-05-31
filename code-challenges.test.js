@@ -62,7 +62,7 @@ const fibo = (arrNum) => {
     }
      
 }
-//COULD NOT FIGURE OUT ****
+//COULD NOT FIGURE OUT IN TIME LIMIT****
 
 
 // --------------------2) Create a function that takes in an array and returns a new array of only odd numbers sorted from least to greatest.
@@ -111,7 +111,7 @@ const oddOrdered = (array) => {
        })
 }
 
-//COULD NOT FIGURE OUT ***
+//COULD NOT FIGURE OUT IN TIME LIMIT ***
 
 
 
@@ -169,5 +169,6 @@ const accuSum = (nums) => {
 //   ✕ returns a new array of only odd numbers sorted from least to greatest.
 // accuSum
 //   ✓ returns an array of the accumulating sum. An empty array should return an empty array. (1 ms)
+
 //IT SAYS FAIL BECAUSE I COULDNT FIGURE OUT THE FIRST TWO PROBLEMS BUT accuSum IS PASSED
 
